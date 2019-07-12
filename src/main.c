@@ -6,7 +6,7 @@
 /*   By: mcarter <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/12 13:13:26 by mcarter           #+#    #+#             */
-/*   Updated: 2019/07/12 15:23:37 by mcarter          ###   ########.fr       */
+/*   Updated: 2019/07/12 15:27:29 by mcarter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,17 +17,17 @@ void	output_info(char *v, long long s, MAXNBR min, MAXUNBR max)
 	long long len;
 
 	ft_putstr_n(v, 14);
-	len = ft_nbrlen(s);
+	len = ft_nbrlen(s) + 6;
 	ft_putnbr(s);
 	ft_putstr(" bytes");
 	while (len < 9)
 	{
 		ft_putchar(' ');
-		len ++;
+		len++;
 	}
-	ft_putnbr_n(min, 29);
+	ft_putnbr_n(min, 40);
 	ft_putchar(' ');
-	ft_putnbr_nu(max, 30);
+	ft_putnbr_u(max);
 	ft_putchar('\n');
 }
 
@@ -35,7 +35,7 @@ int		main(void)
 {
 	ft_putstr_n("Var Type:", 14);
 	ft_putstr_n("Size:", 9);
-	ft_putstr_n("Min:", 30);
+	ft_putstr_n("Min:", 41);
 	ft_putstr_n("Max:", 30);
 	ft_putchar('\n');
 
@@ -75,8 +75,8 @@ int		main(void)
 	ft_putstr("\nDecimal (can't get min):\n");
 	output_info("float", sizeof(float), MIN_OF(float), MAX_OF(float));
 	output_info("double", sizeof(double), MIN_OF(double), MAX_OF(double));
-	output_info("long double", sizeof(long double), 0, MAX_OF(double));
-	ft_putchar('\n'); //MIN_OF(long_double)
+	output_info("long double", sizeof(long double), MIN_OF(long double), MAX_OF(double));
+	ft_putchar('\n');
 
 	ft_putstr("Unsigned:\n");
 
