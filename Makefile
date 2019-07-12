@@ -6,7 +6,7 @@
 #    By: mcarter <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/07/12 13:33:41 by mcarter           #+#    #+#              #
-#    Updated: 2019/07/12 13:59:39 by mcarter          ###   ########.fr        #
+#    Updated: 2019/07/12 14:11:23 by mcarter          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,7 @@ HFILE = src/VarSizes.h
 
 all: $(NAME)
 
-$(NAME): $(OFILES) $(HFILE) bin
+$(NAME): $(OFILES) $(HFILE)
 	gcc $(GCCFLAGS) $(OFILES) -o $(NAME)
 
 clean:
@@ -26,17 +26,18 @@ clean:
 
 re: fclean all
 
-bin/put.o: src/put.c $(HFILE) bin
+bin/put.o: src/put.c $(HFILE)
+	@mkdir -p bin
 	gcc $(GCCFLAGS) -c src/put.c -o bin/put.o
 
-bin/len.o: src/len.c $(HFILE) bin
+bin/len.o: src/len.c $(HFILE)
+	@mkdir -p bin
 	gcc $(GCCFLAGS) -c src/len.c -o bin/len.o
 
-bin/pad.o: src/pad.c $(HFILE) bin
+bin/pad.o: src/pad.c $(HFILE)
+	@mkdir -p bin
 	gcc $(GCCFLAGS) -c src/pad.c -o bin/pad.o
 
-bin/main.o: src/main.c $(HFILE) bin
+bin/main.o: src/main.c $(HFILE)
+	@mkdir -p bin
 	gcc $(GCCFLAGS) -c src/main.c -o bin/main.o
-
-bin:
-	mkdir bin
