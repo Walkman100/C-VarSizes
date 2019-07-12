@@ -6,7 +6,7 @@
 /*   By: mcarter <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/12 13:13:26 by mcarter           #+#    #+#             */
-/*   Updated: 2019/07/12 15:27:29 by mcarter          ###   ########.fr       */
+/*   Updated: 2019/07/12 15:37:17 by mcarter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,7 +75,11 @@ int		main(void)
 	ft_putstr("\nDecimal (can't get min):\n");
 	output_info("float", sizeof(float), MIN_OF(float), MAX_OF(float));
 	output_info("double", sizeof(double), MIN_OF(double), MAX_OF(double));
+#ifdef __SIZEOF_INT128__
 	output_info("long double", sizeof(long double), MIN_OF(long double), MAX_OF(double));
+#else
+	output_info("long double", sizeof(long double), 0, MAX_OF(double));
+#endif
 	ft_putchar('\n');
 
 	ft_putstr("Unsigned:\n");
@@ -89,6 +93,7 @@ int		main(void)
 	output_info("uint64_t", sizeof(uint64_t), MIN_OF(uint64_t), MAX_OF(uint64_t));
 	output_info("ulong", sizeof(unsigned long), 0, MAX_OF(unsigned long));
 	output_info("ulong long", sizeof(unsigned long long), MIN_OF(unsigned long long), MAX_OF(unsigned long long));
+	output_info("ulong long int", sizeof(unsigned long long int), MIN_OF(unsigned long long int), MAX_OF(unsigned long long int));
 	output_info("size_t", sizeof(size_t), MIN_OF(size_t), MAX_OF(size_t));
 	output_info("clock_t", sizeof(clock_t), MIN_OF(clock_t), MAX_OF(clock_t));
 	output_info("uintmax_t", sizeof(uintmax_t), MIN_OF(uintmax_t), MAX_OF(uintmax_t));
