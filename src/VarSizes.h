@@ -6,7 +6,7 @@
 /*   By: mcarter <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/12 13:00:57 by mcarter           #+#    #+#             */
-/*   Updated: 2019/07/12 14:14:46 by mcarter          ###   ########.fr       */
+/*   Updated: 2019/07/12 14:31:23 by mcarter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@
 # include <time.h>
 
 # ifdef __SIZEOF_INT128__
-#  define MAXNBR __int128_t
-#  define MAXUNBR __uint128_t
+#  define MAXNBR __int128
+#  define MAXUNBR unsigned __int128
 # else
 #  define MAXNBR long long
 #  define MAXUNBR unsigned long long
