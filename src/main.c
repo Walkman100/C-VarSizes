@@ -6,7 +6,7 @@
 /*   By: mcarter <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/12 13:13:26 by mcarter           #+#    #+#             */
-/*   Updated: 2019/07/12 15:37:17 by mcarter          ###   ########.fr       */
+/*   Updated: 2019/07/12 15:45:12 by mcarter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,27 +16,30 @@ void	output_info(char *v, long long s, MAXNBR min, MAXUNBR max)
 {
 	long long len;
 
-	ft_putstr_n(v, 14);
+	ft_putstr(BCYAN);
+	ft_putstr_n(v, 15);
 	len = ft_nbrlen(s) + 6;
+	ft_putstr(BBLUE);
 	ft_putnbr(s);
-	ft_putstr(" bytes");
+	ft_putstr(" bytes" BGREEN);
 	while (len < 9)
 	{
 		ft_putchar(' ');
 		len++;
 	}
 	ft_putnbr_n(min, 40);
-	ft_putchar(' ');
+	ft_putstr(" " BRED);
 	ft_putnbr_u(max);
-	ft_putchar('\n');
+	ft_putstr(RESET "\n");
 }
 
 int		main(void)
 {
-	ft_putstr_n("Var Type:", 14);
+	ft_putstr(RESET BWHITE);
+	ft_putstr_n("Var Type:", 15);
 	ft_putstr_n("Size:", 9);
 	ft_putstr_n("Min:", 41);
-	ft_putstr_n("Max:", 30);
+	ft_putstr("Max:" RESET);
 	ft_putchar('\n');
 
 	output_info("int8_t", sizeof(int8_t), MIN_OF(int8_t), MAX_OF(int8_t));
