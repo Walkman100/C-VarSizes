@@ -6,7 +6,7 @@
 /*   By: mcarter <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/12 13:03:33 by mcarter           #+#    #+#             */
-/*   Updated: 2019/07/12 13:11:55 by mcarter          ###   ########.fr       */
+/*   Updated: 2019/07/12 13:30:38 by mcarter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,20 +25,17 @@ void	ft_putstr_n(const char *s, unsigned long long total_len)
 	}
 }
 
-void	ft_putnbr_n(long long n, long long total_len, int pad_right)
+void	ft_putnbr_n(long long n, long long total_len)
 {
 	long long nlen;
 
 	nlen = ft_nbrlen(n);
-	if (pad_right)
-		ft_putnbr(n);
 	while (nlen < total_len)
 	{
 		ft_putchar(' ');
 		nlen++;
 	}
-	if (!pad_right)
-		ft_putnbr(n);
+	ft_putnbr(n);
 }
 
 void	ft_putnbr_nu(unsigned long long n, unsigned long long total_len)

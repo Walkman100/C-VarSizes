@@ -6,7 +6,7 @@
 /*   By: mcarter <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/12 13:00:57 by mcarter           #+#    #+#             */
-/*   Updated: 2019/07/12 13:20:37 by mcarter          ###   ########.fr       */
+/*   Updated: 2019/07/12 13:29:33 by mcarter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ unsigned long long	ft_nbrlen_u(unsigned long long i);
 unsigned long long	ft_strlen(const char *s);
 
 void		ft_putstr_n(const char *s, unsigned long long total_len);
-void		ft_putnbr_n(long long n, long long total_len, int pad_right);
+void		ft_putnbr_n(long long n, long long total_len);
 void		ft_putnbr_nu(unsigned long long n, unsigned long long total_len);
 
 // thanks to https://stackoverflow.com/a/28338942/2999220
