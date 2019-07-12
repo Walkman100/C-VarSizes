@@ -6,13 +6,13 @@
 /*   By: mcarter <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/12 13:13:26 by mcarter           #+#    #+#             */
-/*   Updated: 2019/07/12 14:33:07 by mcarter          ###   ########.fr       */
+/*   Updated: 2019/07/12 15:23:37 by mcarter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "VarSizes.h"
 
-void	output_info(char *v, long long s, long long min, unsigned long long max)
+void	output_info(char *v, long long s, MAXNBR min, MAXUNBR max)
 {
 	long long len;
 
@@ -69,8 +69,7 @@ int		main(void)
 	output_info("long long int", sizeof(long long int), MIN_OF(long long int), MAX_OF(long long int));
 	output_info("off_t", sizeof(off_t), MIN_OF(off_t), MAX_OF(off_t));
 #ifdef __SIZEOF_INT128__
-	output_info("__int128", sizeof(__int128), 0, 0); //MIN_OF(__int128), MAX_OF(__int128));
-	ft_putstr("(too big for MIN_OF and MAX_OF)\n");
+	output_info("__int128", sizeof(__int128), MIN_OF(__int128), MAX_OF(__int128));
 #endif
 
 	ft_putstr("\nDecimal (can't get min):\n");
@@ -96,8 +95,7 @@ int		main(void)
 	output_info("void *", sizeof(void *), MIN_OF(void *), MAX_OF(void *));
 	output_info("char *", sizeof(char *), MIN_OF(char *), MAX_OF(char *));
 #ifdef __SIZEOF_INT128__
-	output_info("__uint128", sizeof(unsigned __int128), 0, 0); //MIN_OF(unsigned __int128), MAX_OF(unsigned __int128));
-	ft_putstr("(too big for MIN_OF and MAX_OF)\n");
+	output_info("__uint128", sizeof(unsigned __int128), MIN_OF(unsigned __int128), MAX_OF(unsigned __int128));
 #endif
 
 	return (0);

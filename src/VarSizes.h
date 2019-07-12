@@ -6,7 +6,7 @@
 /*   By: mcarter <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/12 13:00:57 by mcarter           #+#    #+#             */
-/*   Updated: 2019/07/12 14:31:23 by mcarter          ###   ########.fr       */
+/*   Updated: 2019/07/12 15:17:55 by mcarter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,10 +38,11 @@ void	ft_putnbr_n(MAXNBR n, MAXNBR total_len);
 void	ft_putnbr_nu(MAXUNBR n, MAXUNBR total_len);
 
 // thanks to https://stackoverflow.com/a/28338942/2999220
+// modified to use MAXNBR and MAXUNBR
 
 # define MAX_OF(type) \
-    (((type)(~0LLU) > (type)((1LLU<<((sizeof(type)<<3)-1))-1LLU)) ? (long long unsigned int)(type)(~0LLU) : (long long unsigned int)(type)((1LLU<<((sizeof(type)<<3)-1))-1LLU))
+    (((type)((MAXUNBR)~0) > (type)(((MAXUNBR)1<<((sizeof(type)<<3)-1))-1LLU)) ? (MAXUNBR)(type)((MAXUNBR)~0) : (MAXUNBR)(type)(((MAXUNBR)1<<((sizeof(type)<<3)-1))-1LLU))
 # define MIN_OF(type) \
-    (((type)(1LLU<<((sizeof(type)<<3)-1)) < (type)1) ? (long long int)((~0LLU)-((1LLU<<((sizeof(type)<<3)-1))-1LLU)) : 0LL)
+    (((type)((MAXUNBR)1<<((sizeof(type)<<3)-1)) < (type)1) ? (MAXNBR)(((MAXUNBR)~0)-(((MAXUNBR)1<<((sizeof(type)<<3)-1))-1LLU)) : 0LL)
 
 #endif
