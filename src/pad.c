@@ -6,15 +6,15 @@
 /*   By: mcarter <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/12 13:03:33 by mcarter           #+#    #+#             */
-/*   Updated: 2019/07/12 13:30:38 by mcarter          ###   ########.fr       */
+/*   Updated: 2019/07/12 14:08:37 by mcarter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "VarSizes.h"
 
-void	ft_putstr_n(const char *s, unsigned long long total_len)
+void	ft_putstr_n(const char *s, MAXUNBR total_len)
 {
-	unsigned long long slen;
+	MAXUNBR slen;
 
 	slen = ft_strlen(s);
 	ft_putstr(s);
@@ -25,9 +25,9 @@ void	ft_putstr_n(const char *s, unsigned long long total_len)
 	}
 }
 
-void	ft_putnbr_n(long long n, long long total_len)
+void	ft_putnbr_n(MAXNBR n, MAXNBR total_len)
 {
-	long long nlen;
+	MAXNBR nlen;
 
 	nlen = ft_nbrlen(n);
 	while (nlen < total_len)
@@ -38,9 +38,9 @@ void	ft_putnbr_n(long long n, long long total_len)
 	ft_putnbr(n);
 }
 
-void	ft_putnbr_nu(unsigned long long n, unsigned long long total_len)
+void	ft_putnbr_nu(MAXUNBR n, MAXUNBR total_len)
 {
-	unsigned long long nlen;
+	MAXUNBR nlen;
 
 	nlen = ft_nbrlen_u(n);
 	ft_putnbr_u(n);
