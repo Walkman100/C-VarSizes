@@ -6,12 +6,12 @@
 /*   By: mcarter <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/12 13:00:57 by mcarter           #+#    #+#             */
-/*   Updated: 2019/07/12 15:39:31 by mcarter          ###   ########.fr       */
+/*   Updated: 2019/07/12 15:47:43 by mcarter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef VAR_SIZES_H
-# define VAR_SIZES_H
+#ifndef VARSIZES_H
+# define VARSIZES_H
 # include <unistd.h>
 # include <inttypes.h>
 # include <time.h>

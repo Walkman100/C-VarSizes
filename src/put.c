@@ -6,7 +6,7 @@
 /*   By: mcarter <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/12 12:46:27 by mcarter           #+#    #+#             */
-/*   Updated: 2019/07/12 14:06:47 by mcarter          ###   ########.fr       */
+/*   Updated: 2019/07/12 15:48:09 by mcarter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ void	ft_putnbr(MAXNBR n)
 		ft_putnbr(n % 10);
 	}
 	else
-		ft_putchar (n + '0');
+		ft_putchar(n + '0');
 }
 
 void	ft_putnbr_u(MAXUNBR n)

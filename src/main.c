@@ -86,7 +86,6 @@ int		main(void)
 	ft_putchar('\n');
 
 	ft_putstr("Unsigned:\n");
-
 	output_info("uint8_t", sizeof(uint8_t), MIN_OF(uint8_t), MAX_OF(uint8_t));
 	output_info("uchar", sizeof(unsigned char), MIN_OF(unsigned char), MAX_OF(unsigned char));
 	output_info("uint16_t", sizeof(uint16_t), MIN_OF(uint16_t), MAX_OF(uint16_t));
