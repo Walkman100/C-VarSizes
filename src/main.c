@@ -64,9 +64,7 @@ int		main(void)
 	OUTPUT(long long);
 	OUTPUT(signed long long);
 	OUTPUT(ssize_t);
-#ifdef _TIME_T
 	OUTPUT(time_t);
-#endif
 	OUTPUT(intptr_t);
 	OUTPUT(intmax_t);
 	OUTPUT(long int);
