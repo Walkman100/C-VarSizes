@@ -6,7 +6,7 @@
 /*   By: mcarter <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/12 13:00:57 by mcarter           #+#    #+#             */
-/*   Updated: 2019/07/12 16:07:18 by mcarter          ###   ########.fr       */
+/*   Updated: 2019/07/14 15:06:58 by mcarter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 # include <unistd.h>
 # include <inttypes.h>
 # include <time.h>
+# include <wchar.h>
 
 # ifdef __SIZEOF_INT128__
 #  define MAXNBR __int128

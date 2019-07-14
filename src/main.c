@@ -6,7 +6,7 @@
 /*   By: mcarter <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/12 13:13:26 by mcarter           #+#    #+#             */
-/*   Updated: 2019/07/12 16:03:37 by mcarter          ###   ########.fr       */
+/*   Updated: 2019/07/14 15:10:28 by mcarter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,9 +56,8 @@ int		main(void)
 	OUTPUT(pid_t);
 #ifdef linux
 	OUTPUT(__gwchar_t);
-#else
-	OUTPUT(wchar_t);
 #endif
+	OUTPUT(wchar_t);
 	OUTPUT(int64_t);
 	OUTPUT(long);
 	OUTPUT(signed long);
