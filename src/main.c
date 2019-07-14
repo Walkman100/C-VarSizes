@@ -59,6 +59,7 @@ int		main(void)
 	OUTPUT(signed char);
 	OUTPUT(int16_t);
 	OUTPUT(short);
+	OUTPUT(short int);
 	OUTPUT(signed short);
 	OUTPUT(int32_t);
 	OUTPUT(int);
@@ -70,15 +71,15 @@ int		main(void)
 	OUTPUT(wchar_t);
 	OUTPUT(int64_t);
 	OUTPUT(long);
+	OUTPUT(long int);
 	OUTPUT(signed long);
 	OUTPUT(long long);
+	OUTPUT(long long int);
 	OUTPUT(signed long long);
 	OUTPUT(ssize_t);
 	OUTPUT(time_t);
-	OUTPUT(intptr_t);
 	OUTPUT(intmax_t);
-	OUTPUT(long int);
-	OUTPUT(long long int);
+	OUTPUT(intptr_t);
 	OUTPUT(off_t);
 #ifdef __SIZEOF_INT128__
 	OUTPUT(__int128);
