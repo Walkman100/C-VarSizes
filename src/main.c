@@ -12,36 +12,46 @@
 
 #include "VarSizes.h"
 
+void	put_clr(char *c)
+{
+	if (isatty (1))
+		ft_putstr(c);
+}
+
 void	output_info(char *v, long long s, MAXNBR min, MAXUNBR max)
 {
 	long long len;
 
-	ft_putstr(BCYAN);
+	put_clr(BCYAN);
 	ft_putstr_n(v, 23);
 	len = ft_nbrlen(s) + 6;
-	ft_putstr(BBLUE);
+	put_clr(BBLUE);
 	ft_putnbr(s);
-	ft_putstr(" bytes" BGREEN);
+	ft_putstr(" bytes");
+	put_clr(BGREEN);
 	while (len < 9)
 	{
 		ft_putchar(' ');
 		len++;
 	}
 	ft_putnbr_n(min, 40);
-	ft_putstr(" " BRED);
+	ft_putstr(" ");
+	put_clr(BRED);
 	ft_putnbr_u(max);
-	ft_putstr(RESET "\n");
+	put_clr(RESET);
+	ft_putstr("\n");
 }
 
 # define OUTPUT(var) output_info(#var, sizeof(var), MIN_OF(var), MAX_OF(var))
 
 int		main(void)
 {
-	ft_putstr(RESET BWHITE);
+	put_clr(RESET BWHITE);
 	ft_putstr_n("Var Type:", 23);
 	ft_putstr_n("Size:", 9);
 	ft_putstr_n("Min:", 41);
-	ft_putstr("Max:" RESET);
+	ft_putstr("Max:");
+	put_clr(RESET);
 	ft_putchar('\n');
 
 	OUTPUT(int8_t);
