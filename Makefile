@@ -6,7 +6,7 @@
 #    By: mcarter <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/07/12 13:33:41 by mcarter           #+#    #+#              #
-#    Updated: 2019/07/12 14:11:23 by mcarter          ###   ########.fr        #
+#    Updated: 2019/07/14 15:04:11 by mcarter          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,7 +24,7 @@ clean:
 	rm -rf bin/
 	rm -f $(NAME)
 
-re: fclean all
+re: clean all
 
 bin/put.o: src/put.c $(HFILE)
 	@mkdir -p bin
@@ -40,4 +40,5 @@ bin/pad.o: src/pad.c $(HFILE)
 
 bin/main.o: src/main.c $(HFILE)
 	@mkdir -p bin
-	gcc $(GCCFLAGS) -c src/main.c -o bin/main.o
+	gcc $(GCCFLAGS) -c src/main.c -o bin/main.o -Wno-error=pointer-to-int-cast
+	@# error ignore is to fix build on linux
