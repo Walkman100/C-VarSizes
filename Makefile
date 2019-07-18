@@ -6,7 +6,7 @@
 #    By: mcarter <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/07/12 13:33:41 by mcarter           #+#    #+#              #
-#    Updated: 2019/07/14 15:04:11 by mcarter          ###   ########.fr        #
+#    Updated: 2019/07/18 08:56:15 by mcarter          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,6 +25,9 @@ clean:
 	rm -f $(NAME)
 
 re: clean all
+
+norm:
+	norminette -R CheckForbiddenSourceHeader $(HFILE) src/put.c src/len.c src/pad.c src/main.c 2>/dev/null
 
 bin/put.o: src/put.c $(HFILE)
 	@mkdir -p bin
